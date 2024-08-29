@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: CloudFormation Template to deploying a simple s3 bucket
+Description: CloudFormation Template to deploying a simple s3 buckets
 Resources:
   S3Bucket:
     Type: 'AWS::S3::Bucket'
