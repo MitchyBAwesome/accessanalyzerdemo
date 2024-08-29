@@ -45,5 +45,5 @@ jobs:
           template-path: './ec2-instance-role.yaml'
           reference-policy: './reference-identity-policy.json'
           reference-policy-type: "RESOURCE"
-          region: <AWSRegion>
+          region: ap-southeast-2
 
