@@ -46,4 +46,12 @@ jobs:
           reference-policy: './reference-identity-policy.json'
           reference-policy-type: "RESOURCE"
           region: ap-southeast-2
+      
+      - name: Run AWS AccessAnalyzer CheckNoPublicAccess check
+        id: run-aws-check-no-public-access
+        uses: aws-actions/cloudformation-aws-iam-policy-validator@v1.0.3
+        with:
+          policy-check-type: 'CHECK_NO_PUBLIC_ACCESS'
+          template-path: './ec2-instance-role.yaml'
+          region: ap-southeast-2
 
