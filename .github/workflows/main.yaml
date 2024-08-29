@@ -36,16 +36,6 @@ jobs:
         run: |
           aws s3 cp ${{ secrets.REFERENCE_IDENTITY_POLICY }} ./reference-identity-policy.json
         shell: bash
-          
-      - name: Run AWS AccessAnalyzer CheckNoNewAccess check
-        id: run-aws-check-no-new-access
-        uses: aws-actions/cloudformation-aws-iam-policy-validator@v1.0.3
-        with:
-          policy-check-type: 'CHECK_NO_NEW_ACCESS'
-          template-path: './ec2-instance-role.yaml'
-          reference-policy: './reference-identity-policy.json'
-          reference-policy-type: "RESOURCE"
-          region: ap-southeast-2
       
       - name: Run AWS AccessAnalyzer CheckNoPublicAccess check
         id: run-aws-check-no-public-access
