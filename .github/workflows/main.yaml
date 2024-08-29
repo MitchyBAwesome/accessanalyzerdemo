@@ -44,6 +44,6 @@ jobs:
           policy-check-type: 'CHECK_NO_NEW_ACCESS'
           template-path: './ec2-instance-role.yaml'
           reference-policy: './reference-identity-policy.json'
-          reference-policy-type: "IDENTITY"
+          reference-policy-type: "RESOURCE"
           region: <AWSRegion>
 
